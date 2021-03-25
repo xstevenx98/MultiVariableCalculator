@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Project One</title>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro'
+    rel='stylesheet' type='text/css' />
+<link rel="stylesheet" type="text/css"
+    href="http://www.sci.brooklyn.cuny.edu/~sdexter/style.css" />
+</head>
+
+<body>
+    <div id="container">
+        <h1>Project One: Multibase Calculator</h1>
+
+        <h2>Overview</h2>
+
+        <p>The main objective of this project is to give you experience with the Swing API, especially event handling.</p>
+
+	<p>As with Project 0, you must use this repository to share your code with me. If you haven't already, clone this repository to your Eclipse workspace. There is no Java code in this repository initially; use your <code>
+            Base4Calculator</code> project as the basis for this project. One easy way to do that in Eclipse: open your <code>
+            Base4Calculator
+          </code>
+          project, which should be "connected" to the <code>
+            class16-code
+          </code>
+          clone you made in class. Right-click on the project, go to the Team menu, and select "Disconnect" (probably near the bottom). This will take your project out of git version control. Now, "reconnect" it to this repository with the "Share Project" option from the Team menu. Now all your commits and pushes will be reflected in this repository.
+          
+        </p>
+
+        <p>The project is due at 11:59pm on Wednesday, May 3. I will
+        clone your repositories for grading at that time.</p>
+
+        <h2>The Project</h2>
+
+    <p>In class, you started working on a base 4 calculator. In this project, you will expand the functionality of this calculator to work with any base between 2 and 16.</p>
+
+    <p>Specifically, you will need 16 "digit buttons" for the digits
+        0...9 and A...F (remember that "letter digits" are used to
+        represent digits whose values are 10 or greater, as
+        in <a href="https://en.wikipedia.org/wiki/Hexadecimal">hexadecimal</a>,
+        or base 16). And you will need a <code><a href="https://docs.oracle.com/javase/7/docs/api/javax/swing/JSlider.html">JSlider</a></code> that lets the user select the base the calculator is
+        currently using. You should also be sure the calculator
+        displays its current base in a useful way. When the user uses
+        the slider to select a different base, the calculator should
+      <em>respond immediately</em>: The number in the calculator's display
+        area should be represented in the new base, and the digit
+      buttons should reflect the new base. You can do
+        this <em>very</em> responsively, as the user is moving the
+        "knob," or you can wait until the user is done. It should be clear to the user that the "active" buttons depend on the base: the buttons may be enabled/disabled (using the <code>
+        setEnabled()</code> method), or you could try something more complex. 
+    </p>
+
+    <p>In addition to the multibase functionality, your calculator should:
+    <ul>
+    <li>Calculate correctly (again, using integer division, not decimals)</li>
+    <li>Have a reasonable layout</li>
+    <li>Have well-designed code.</li>
+    <li>Be completely documented, as in project 0: <code>README.md</code>, doccomments, javadoc, inline comments.</li>
+    </ul></p>
+
+        
+        <h2>Grading</h2>
+
+        <p>I will grade out of 100 points, allocated as follows:</p>
+
+        <ol>
+            
+                  <li><p><b>40% Correctness and Efficiency</b>. Does the calculator compute and display correctly, with all UI components behaving correctly? Is your layout complete and usable? Is your code efficient in its use of time and storage space?
+
+                </p></li>
+           
+            
+                <li><p><b>20% Documentation</b>. Your project should include
+                three kinds of documentation, as described in the <a
+                    href="http://bc-cisc3120-s17.github.io/documentation.html">About
+                    Documentation</a> page. You should provide doccomments
+                for each class and method in your project, and generate
+                HTML documentation using javadoc. For this project, the
+                <code>README.md</code> file in your repository
+                needs only to contain a "Works Cited" section: Any
+                website, book, or similar resource from which you get
+                useful guidance must be listed here, along with a brief
+                description of what you got from it (a bit of code? an
+                explanation? an answer to a question?). You do not need
+                to list the Java API or either of the two books
+                required/recommended for class. If you use no other
+                resources, then your "Works Cited" section must simply
+                contain the word <em>None</em>.<p></li>
+            
+
+            <li><p>
+                    <b>20% Design</b>. Are the relationships among your classes (and the way they interact with the Java library classes) logical, clear, and robust? Do they (for example) adhere to the IS-A and HAS-A rules? Do they make appropriate use of design patterns? Is your code otherwise well-designed, e.g. avoiding duplicate code?
+              </p>
+            </li>
+
+                    <li><p><b>20% Style</b>. As before, your code should be properly
+        formatted, with enough (but not too much) whitespace. Eclipse
+        will do most of this for you; make sure you let it help you.
+        Variable names, metohd names, etc, should all be
+        "self-documenting" but not excessively long (one-letter
+        variables names should <em>only</em> be used as loop counters).
+        <em>Generally</em>, you can use any style you like, as long as
+        you're consistent. If you're not sure what style to use, follow
+        the <a
+            href="https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md">GitHub 
+            Style Guide</a>, except where Eclipse's automatic formatting
+        contradicts these guidelines.</p>
+                      </li>
+        </ol>
+
+                  <p><b>Extra Credit</b>. You can earn up to 10
+                  points of extra credit by implementing additional
+                  calculator-ish functions. For example: memory, or a
+                  "paper tape" that shows a history of the
+                  calculations (maybe that should be exportable to a
+                  file?). If you have other ideas, please check with
+                  me about their extra-creditability before you dive
+                    in. (Increasing the "base range" will <em>not</em> earn extra credit. Keep it 2&ndash;16.) Any extra behaviors you provide should be
+            listed briefly in the
+            <code>README.md</code></p>
+
+                  
+ <p>
+            On this project, and probably all projects this semester,  you are to work strictly
+            <em>on your own</em>. Specifically, you may neither show
+            your code to, nor look at the code of, anyone else taking
+            3120 this semester. You may consult online/textbook
+            resources (subject to the "Documentation" requirements
+            above). You may certainly consult with me. You may, if you
+            like, discuss your design at a high level with other
+            students ("Oh, I found the
+            <code>java.foo.bar</code>
+            package to be really helpful," or, "Sure, I can explain the
+            geometry of a paint window to you.").</p>
+
+ <h2>Hints</h2>
+
+ <p>Notice that you'll have a fair number of  "digit buttons" that you'll be treating
+ essentially the same way. This is an excellent opportunity to
+ experiment using an array, <code>ArrayList</code>, or some other
+ kind of collection, to manage this clot of buttons. Perhaps look around in the Java API to see if
+ there are any classes that will make it easier to deal with this
+   bunch of buttons.</p>
+
+                  <p>Again, it's probably best to make sure
+                  everything else works before you start tweaking
+                  your layout. Remember that complex layouts can be
+                    handled by <em>nesting</em>&mdash;for example,
+                  study the BeatBox layout code that starts on p.
+                  420. (It seriously starts on that page.)</p>
+
+ <p>
+
+       
+    </div>
+</body>
+</html>
